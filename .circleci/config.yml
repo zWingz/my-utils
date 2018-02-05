@@ -3,13 +3,10 @@ jobs:
   build:
     docker:
       - image: node:latest
-      
     working_directory: ~/my-utils
-
     branches:
       only:
         - master
-
     steps:
         - checkout
         - restore_cache:
@@ -24,3 +21,5 @@ jobs:
             key: v1-dependencies-{{ checksum "package.json" }}
         - run: npm install
         - run: npm test
+        - run: npm i -g codecov
+        - run: codecov
