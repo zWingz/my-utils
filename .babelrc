@@ -1,0 +1,15 @@
+{
+    "env": {
+        "development": {
+            "plugins": ["transform-object-rest-spread"]
+        },
+        "production": {
+            "presets": [["es2015", {"modules": false}], "stage-2"],
+            "plugins": ["transform-runtime"]
+        },
+        "testing": {
+            "presets": [["es2015", {"modules": false}], "stage-2"],
+            "plugins": ["transform-runtime", "istanbul"]
+        }
+    }
+}

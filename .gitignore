@@ -1,0 +1,6 @@
+_Store
+node_modules/
+test/coverage
+.vscode
+.eslintrc.json
+npm-debug.*
